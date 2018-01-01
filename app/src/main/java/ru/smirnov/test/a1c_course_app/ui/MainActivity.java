@@ -1,9 +1,11 @@
 package ru.smirnov.test.a1c_course_app.ui;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import ru.smirnov.test.a1c_course_app.R;
@@ -23,7 +25,11 @@ public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapt
         NoteRepository noteRepository = NoteRepository.getInstance(10);
 
         RecyclerView notesRv = findViewById(R.id.notes_rv);
-        notesRv.setLayoutManager(new LinearLayoutManager(this));
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            notesRv.setLayoutManager(new LinearLayoutManager(this));
+        } else {
+            notesRv.setLayoutManager(new GridLayoutManager(this, 2));
+        }
         NoteRecyclerAdapter noteRecyclerAdapter = new NoteRecyclerAdapter(noteRepository.getNotes(), this);
         notesRv.setAdapter(noteRecyclerAdapter);
     }
