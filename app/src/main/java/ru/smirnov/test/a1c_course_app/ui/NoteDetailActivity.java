@@ -10,7 +10,7 @@ import ru.smirnov.test.a1c_course_app.R;
 import ru.smirnov.test.a1c_course_app.models.Note;
 import ru.smirnov.test.a1c_course_app.models.NoteRepository;
 
-public class SecondActivity extends AppCompatActivity {
+public class NoteDetailActivity extends AppCompatActivity {
 
     private TextView noteText;
     private ImageView noteImageView;
