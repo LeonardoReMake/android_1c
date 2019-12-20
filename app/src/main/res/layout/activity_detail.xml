@@ -5,15 +5,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp">
+    android:layout_margin="16dp">
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/note_img_dtl"
         android:src="@drawable/ic_launcher_background"
-        android:maxWidth="250dp"
-        android:maxHeight="300dp"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         app:layout_constraintStart_toStartOf="parent"

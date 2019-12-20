@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements NoteRecyclerAdapt
 
     @Override
     public void onNoteClick(Note note) {
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, NoteDetailActivity.class);
         intent.putExtra(NOTE_ID_EXTRAS, note.getId());
         startActivity(intent);
     }
